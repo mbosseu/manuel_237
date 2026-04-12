@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel 237 - Afrobeat Artist</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Site officiel de Manuel 237. Découvrez son univers Afrobeat, ses clips, ses actualités et réservez pour ses prochains événements.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animé Particules (Etoiles Textes) -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="logo">MANUEL <span class="neon-text">237</span></div>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">L'Artiste</a></li>
+                <li><a href="#music" class="nav-link">Musique</a></li>
+                <li><a href="#gallery" class="nav-link">Galerie</a></li>
+                <li><a href="#contact" class="nav-link">Booking</a></li>
+            </ul>
+        </nav>
+        <button class="btn-primary" onclick="document.getElementById('music').scrollIntoView({behavior: 'smooth'})">Écouter</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <!-- Background Image: The Bar Neon Photo (#6) -->
+        <div class="hero-bg" style="background-image: url('images/WhatsApp%20Image%202026-04-08%20at%2020.50.45.jpeg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="fade-in-up">MANUEL <br> <span class="accent-red">237</span></h1>
+            <p class="subtitle fade-in-up delay-1">The New Era of Premium Afrobeat</p>
+            <div class="hero-cta fade-in-up delay-2">
+                <button class="btn-primary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Découvrir l'univers</button>
+                <div class="social-links-small">
+                    <!-- Placeholder icons to represent socials -->
+                    <a href="#">IG</a>
+                    <a href="#">YT</a>
+                    <a href="#">TK</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image slide-in-left">
+                    <!-- Background Image: The Blue Armchair Photo (#3) -->
+                    <img src="images/WhatsApp Image 2026-04-08 at 20.27.46.jpeg" alt="Manuel 237 élégant sur un fauteuil bleu">
+                    <div class="image-accent-box"></div>
+                </div>
+                <div class="about-text slide-in-right">
+                    <h2 class="section-title">L'ÉLÉGANCE <br> <span class="neon-text">RYTHMIQUE</span></h2>
+                    <p>Débarquant avec une identité forte et un univers visuel mêlant élégance, streetwear et énergie brute, Manuel 237 redéfinit la scène Afrobeat contemporaine.</p>
+                    <p>Entre ambiances nocturnes électrisantes et mélodies organiques, sa musique est une invitation à l'évasion.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">237</span>
+                            <span class="stat-label">L'Identité</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Énergie Vraie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <blockquote class="fade-in-up">
+                <span class="quote-mark">“</span>
+                <p>Vous connaissez la famille, c'est l'artiste des stars, on est ensemble !</p>
+                <cite>— <span class="neon-text">Manuel 237</span></cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Music / Projects Section -->
+    <section id="music" class="music-section">
+        <div class="container">
+            <h2 class="section-title text-center fade-in-up">PROJETS & <span class="neon-text">CLIPS</span></h2>
+            <p class="section-subtitle text-center fade-in-up delay-1">Plongez dans l'univers musical de Manuel 237.</p>
+            
+            <div class="video-grid">
+                <!-- Video 1 -->
+                <a href="https://youtu.be/2ck7YOMnxQM" target="_blank" rel="noopener noreferrer" class="video-card fade-in-up delay-1">
+                    <img src="https://img.youtube.com/vi/2ck7YOMnxQM/hqdefault.jpg" alt="Clip Manuel 237 - 1" class="video-thumbnail">
+                    <div class="video-overlay">
+                        <div class="play-btn">▶</div>
+                        <h3>Regarder sur YouTube</h3>
+                    </div>
+                </a>
+                <!-- Video 2 -->
+                <a href="https://youtu.be/K_1pI8BgJxA" target="_blank" rel="noopener noreferrer" class="video-card fade-in-up delay-2">
+                    <img src="https://img.youtube.com/vi/K_1pI8BgJxA/hqdefault.jpg" alt="Clip Manuel 237 - 2" class="video-thumbnail">
+                    <div class="video-overlay">
+                        <div class="play-btn">▶</div>
+                        <h3>Regarder sur YouTube</h3>
+                    </div>
+                </a>
+                <!-- Video 3 -->
+                <a href="https://youtu.be/jvY-CnrKuEU" target="_blank" rel="noopener noreferrer" class="video-card fade-in-up delay-1">
+                    <img src="https://img.youtube.com/vi/jvY-CnrKuEU/hqdefault.jpg" alt="Clip Manuel 237 - 3" class="video-thumbnail">
+                    <div class="video-overlay">
+                        <div class="play-btn">▶</div>
+                        <h3>Regarder sur YouTube</h3>
+                    </div>
+                </a>
+                <!-- Video 4 -->
+                <a href="https://youtu.be/eAfhHHMc9Gw" target="_blank" rel="noopener noreferrer" class="video-card fade-in-up delay-2">
+                    <img src="https://img.youtube.com/vi/eAfhHHMc9Gw/hqdefault.jpg" alt="Clip Manuel 237 - 4" class="video-thumbnail">
+                    <div class="video-overlay">
+                        <div class="play-btn">▶</div>
+                        <h3>Regarder sur YouTube</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Session Immersive -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="gallery-header fade-in-up">
+                <h2 class="section-title">L'OEIL DU <span class="accent-red">PUBLIC</span></h2>
+            </div>
+            
+            <!-- Nouvelle disposition : Editorial Grid (Photos plus grandes + Textes inspirants) -->
+            <div class="editorial-grid">
+                <!-- Image 1 -->
+                <article class="editorial-card fade-in-up">
+                    <div class="ed-image-wrap">
+                        <img src="images/WhatsApp Image 2026-04-08 at 20.27.44 (2).jpeg" alt="Concert Live Manuel 237">
+                    </div>
+                    <div class="ed-content">
+                        <h3>L'Énergie du Live</h3>
+                        <p>Sur scène, Manuel 237 se transforme. Chaque concert est une communion vibrante où l'Afrobeat prend tout son sens, fédérant la foule autour d'une énergie brute, authentique et sans filtre.</p>
+                    </div>
+                </article>
+                
+                <!-- Image 2 -->
+                <article class="editorial-card fade-in-up delay-1">
+                    <div class="ed-content order-text">
+                        <h3>L'Héritage et la Vision</h3>
+                        <p>Fier de ses racines, il mêle avec élégance la tradition et la modernité. Son style reflète une génération audacieuse qui respecte son passé tout en dessinant les contours de la musique de demain.</p>
+                    </div>
+                    <div class="ed-image-wrap">
+                        <img src="images/WhatsApp Image 2026-04-08 at 20.50.45 (4).jpeg" alt="Manuel 237 Style Elegant">
+                    </div>
+                </article>
+
+                <!-- Image 3 -->
+                <article class="editorial-card fade-in-up">
+                    <div class="ed-image-wrap">
+                        <img src="images/WhatsApp Image 2026-04-08 at 20.27.44 (3).jpeg" alt="Manuel 237 Streetwear">
+                    </div>
+                    <div class="ed-content">
+                        <h3>L'Attitude Chill</h3>
+                        <p>Plus qu'une simple musique, c'est un véritable mode de vie. L'élégance décontractée et le flow qui définissent son identité visuelle résonnent parfaitement avec son approche sonore très travaillée.</p>
+                    </div>
+                </article>
+
+                <!-- Image 4 -->
+                <article class="editorial-card fade-in-up delay-1">
+                    <div class="ed-content order-text">
+                        <h3>Le Focus Absolu</h3>
+                        <p>Derrière chaque succès se cache une discipline de fer. Dans le silence de la préparation, mentale ou physique, se forgé la résilience nécessaire pour briller sous les projecteurs.</p>
+                    </div>
+                    <div class="ed-image-wrap">
+                        <img src="images/WhatsApp Image 2026-04-08 at 20.41.17.jpeg" alt="Manuel 237 Focus">
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-box fade-in-up">
+                <h2 class="section-title text-center">RÉSERVER <span class="neon-text">MAINTENANT</span></h2>
+                <p class="text-center">Contact professionnel, événements, presse ou collaboration musicale.</p>
+                
+                <form class="booking-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Votre Nom / Agence">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Votre Email">
+                    </div>
+                    <div class="form-group">
+                        <select id="subject">
+                            <option value="booking">Booking / Concert</option>
+                            <option value="collab">Collaboration Musicale</option>
+                            <option value="press">Presse / Interview</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" required placeholder="Parlez-nous de votre projet..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>MANUEL 237</h3>
+                <p>The Premium Afrobeat Experience.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">YouTube</a>
+                <a href="#" class="social-icon">Spotify</a>
+                <a href="#" class="social-icon">TikTok</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Manuel 237 Officiel. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

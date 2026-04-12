@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#ff51fa",
+                    "secondary-container": "#106e00",
+                    "on-error-container": "#ffb2b9",
+                    "on-primary": "#480079",
+                    "background": "#0f0d16",
+                    "surface": "#0f0d16",
+                    "surface-bright": "#2d2a39",
+                    "secondary-fixed": "#2ff801",
+                    "tertiary-fixed": "#ff81f5",
+                    "tertiary-container": "#fe00fe",
+                    "surface-tint": "#cf96ff",
+                    "primary": "#cf96ff",
+                    "primary-fixed-dim": "#bc6fff",
+                    "primary-fixed": "#c683ff",
+                    "inverse-primary": "#8d00e6",
+                    "surface-container-highest": "#272431",
+                    "primary-dim": "#a533ff",
+                    "on-surface": "#f5eefc",
+                    "on-primary-fixed": "#000000",
+                    "on-tertiary-fixed": "#320032",
+                    "surface-container-low": "#14121c",
+                    "tertiary-fixed-dim": "#ff61f8",
+                    "secondary": "#2ff801",
+                    "on-secondary-fixed-variant": "#0d6200",
+                    "on-tertiary-fixed-variant": "#6a006a",
+                    "primary-container": "#c683ff",
+                    "surface-container": "#1b1823",
+                    "secondary-fixed-dim": "#2be800",
+                    "secondary-dim": "#2be800",
+                    "error": "#ff6e84",
+                    "outline": "#78737f",
+                    "outline-variant": "#494651",
+                    "on-background": "#f5eefc",
+                    "on-error": "#490013",
+                    "on-tertiary": "#400040",
+                    "inverse-on-surface": "#57535f",
+                    "inverse-surface": "#fdf7ff",
+                    "on-secondary": "#0b5800",
+                    "tertiary": "#ff51fa",
+                    "on-surface-variant": "#aea9b6",
+                    "surface-container-high": "#211e2a",
+                    "on-primary-fixed-variant": "#450074",
+                    "surface-container-lowest": "#000000",
+                    "on-secondary-container": "#e7ffd9",
+                    "on-secondary-fixed": "#064200",
+                    "error-container": "#a70138",
+                    "surface-dim": "#0f0d16",
+                    "on-primary-container": "#37005f",
+                    "error-dim": "#d73357",
+                    "on-tertiary-container": "#230023",
+                    "surface-variant": "#272431"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .smoke-overlay {
+            background: linear-gradient(to bottom, transparent, #0f0d16), 
+                        radial-gradient(circle at 50% 50%, rgba(207, 150, 255, 0.05) 0%, transparent 70%);
+            mix-blend-mode: screen;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(207, 150, 255, 0.5);
+        }
+        .tonal-shift-only {
+            background-color: rgba(15, 13, 22, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-x-hidden selection:bg-secondary selection:text-on-secondary-fixed">
+<nav class="fixed top-0 w-full z-50 bg-[#0f0d16]/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full shadow-[0_0_20px_rgba(207,150,255,0.1)]">
+<div class="text-2xl font-black text-[#cf96ff] tracking-widest font-headline uppercase">Afromuse</div>
+<div class="hidden md:flex gap-8 items-center font-['Space_Grotesk'] tracking-tighter uppercase">
+<a class="text-[#f5eefc] hover:text-[#cf96ff] transition-colors hover:scale-105 transition-transform duration-300" href="#bio">Bio</a>
+<a class="text-[#f5eefc] hover:text-[#cf96ff] transition-colors hover:scale-105 transition-transform duration-300" href="#music">Music</a>
+<a class="text-[#f5eefc] hover:text-[#cf96ff] transition-colors hover:scale-105 transition-transform duration-300" href="#gallery">Gallery</a>
+<a class="text-[#f5eefc] hover:text-[#cf96ff] transition-colors hover:scale-105 transition-transform duration-300" href="#news">News</a>
+<a class="text-[#f5eefc] hover:text-[#cf96ff] transition-colors hover:scale-105 transition-transform duration-300" href="#booking">Booking</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary-container px-6 py-2 font-label font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all duration-300 rounded-md">
+            Tickets
+        </button>
+</nav>
+<main class="relative">
+<section class="relative h-screen flex items-end justify-start overflow-hidden pt-20" id="hero">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover scale-105" data-alt="Cinematic wide shot of a performer on a neon-lit stage with purple and magenta haze and atmospheric smoke effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd31GL26oHxNZUxXMN0-1FlFNSIQ0JfwtSwpLDMzMDFUqw6p1c_pZXILcvGIueEaiTXMtYob2JeUFRLI-i_8-Fv3Kbph5wNK-cQKV6EN6-b5pUuVlsfAYlNJnKkHvgwRPcL29w9f765kYxz-s4xZveCIH_ASi-CJXyLWkj2bOPaEkKdwkZj-Q9NKkN3mTB0Rld8ykfqpk-uYRRhDZr5AogS65nJ8lsfsiryNAD14yolc5U3tOFEWC0-X5PDaWTAODQU0Hs8nX1HBUr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+<div class="absolute inset-0 smoke-overlay"></div>
+</div>
+<div class="relative z-10 p-8 md:p-16 max-w-5xl">
+<h1 class="font-headline font-black text-7xl md:text-[12rem] leading-[0.85] tracking-tighter text-[#cf96ff] uppercase mix-blend-screen text-glow">
+                    Afro<br/>Muse
+                </h1>
+<div class="mt-8 flex flex-col md:flex-row gap-8 items-start md:items-center">
+<p class="text-xl md:text-2xl font-light max-w-xl text-on-surface/80 border-l-4 border-secondary pl-6 uppercase tracking-widest">
+                        A sonic revolution carved from the intersection of future-beats and heritage soul.
+                    </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<div class="font-label uppercase text-sm tracking-[0.3em]">Watch: "The Pulse" Live</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 md:px-16 bg-surface-container-lowest" id="bio">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-7">
+<h2 class="font-headline font-black text-5xl md:text-8xl mb-12 tracking-tighter text-tertiary">THE ARCHETYPE</h2>
+<div class="space-y-8 text-lg md:text-xl text-on-surface-variant font-light leading-relaxed">
+<p>Born in the vibrant chaos of Lagos and refined in the neon-soaked underground of Berlin, Afromuse is more than an artist—it is an architectural sound experiment. Every beat is a deliberate choice, every lyric a brushstroke on a digital canvas.</p>
+<p>With three platinum records and a reputation for immersive audiovisual experiences, the "Afromuse Sound" has redefined contemporary electronic music by infusing it with ancestral rhythms that beat like a frantic heart.</p>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[3/4] overflow-hidden rounded-lg bg-surface-container">
+<img class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-700" data-alt="Dramatic black and white editorial portrait of a musician with neon magenta lighting accents on the face and neck" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPqospB1e1EE2xmihmlNg3IJS8ChHbcDC65BKs2fJjF0_l3b1EC9r1CbDcdT2da8b8hclTaXDkfv-9jYk_q56ytZCcT4kignvTebWOknq2a4UPMCitTzhJ50mS25qLdrtcVfPjyfqAa5uRmGGxLe7c_4mJ_f0uZvUXn02nfhUsaTkQiZzdwVSyPruBaVyyI_0JGdBo5vZsuyUC__bA1TnrsiFP_fqi76V-OIcx7HqIOU7oBNCMDCf9_R9p6-TWIbuEJkahhw4zctyJ"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-secondary text-on-secondary px-8 py-4 font-headline font-black text-2xl uppercase italic">
+                        Est. 2018
+                    </div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-surface" id="music">
+<div class="px-8 md:px-16 mb-16 flex justify-between items-end">
+<h2 class="font-headline font-black text-5xl md:text-7xl tracking-tighter text-on-surface">DISCOGRAPHY</h2>
+<div class="font-label text-secondary tracking-widest uppercase">Select Works Vol. 01-04</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-1">
+<div class="group relative aspect-square overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Abstract album art featuring fluid neon green lines on a pitch black background with digital noise texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA96KZvb1sIBXpPHTTgeEmEEnqtGayaFjn0KaUxRAwUYIfbOT638oLNebOIAftaY97swDp-pMH20HW7ZA7WbV4__7CxN9gG0-qA65SF9hazeVDjyyFx8PQkemYOuZPw_3CAvHmf_YvSWLo5vxbkjceJ46KBkSa1-Fjal74hihTz2PWxpZCJNVU7dO2X9lxox5_o1xWoh7rTUI86fG3rWXcqU7xEz1Vq4zBGQRWIltchuPgMfNSTAoNGQhTiT5MTQcbAeKfnU_MTG6iS"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-6 left-6">
+<div class="font-headline font-black text-3xl text-on-surface">NEON SOUL</div>
+<div class="font-label text-xs tracking-widest text-secondary">EP / 2023</div>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Vibrant magenta and violet gradient background with grainy film texture and minimalist typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2p0TvlQH5860QRjMEZWp654yXKyECpDAP3u-8WFed_3zbqB4aK4_sAFmD51Mo5zei-eQrWEVTZg6sxx_-QXKvMML3E02YbwA-7W-lpJnugPW2HWQdVTQpcTNnKaHeIZmH3iJsM1AAldWgdfOrAnDlbQlSguKmhDr4BnR0eMh3R_9rk9UQdaG1YfxEPupeN_CxEbzUnEyaV-FC7e2JQGVvCDg37y1LnWCijtRvLx_vaPXReMMX3_HKYLaDrWyVqcZvKRCYaux6oJO7"/>
+<div class="absolute inset-0 bg-tertiary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-6 left-6">
+<div class="font-headline font-black text-3xl text-on-surface">KINETIC</div>
+<div class="font-label text-xs tracking-widest text-secondary">LP / 2022</div>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of DJ equipment knobs and sliders under intense blue and pink stage lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGJAvciOUJyTB7Ug7Sab4IoeDcjltFQVfbQZ8j-SzNJ40pTpjsDPgo7z3FGUeZCw3MapFwJiZvU_k_fM_0L91O8febOWnesFOKr7vsWomdWGp7kv3ePbj_LPr9pSoZ0UdRMA_mn095U8gHdNS1LsMhp7qhZ2KsjkytgdULrECvso-bmR5FrrdjOgdHP7OaGNN-T4Dug5RGmecUJEff4Z2KIvrtvdGG6IbxQ1J9crLJfTad4CkIeCjJZ9mJRGbuXU6Z2fPLVeIOGt0Z"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-6 left-6">
+<div class="font-headline font-black text-3xl text-on-surface">THE PULSE</div>
+<div class="font-label text-xs tracking-widest text-secondary">SINGLE / 2024</div>
+</div>
+</div>
+<div class="group relative aspect-square overflow-hidden bg-surface-container-high cursor-pointer">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Microphone in a dark studio setting with a single spotlight and subtle hazy atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuYhOSBCYEvTKauopXZMvSYicV34Os84cdYR-lWQ71rhaRYhmtlNMc85J29MVgFluzX5u37SM-iaBPCgPE9fFdf2JGRKaNfdXZ0XAfv8TJ1bmdUjXhrITyWgJ-TuLyZa-4mhvtCR8cNv_M6-boFIVzNM0W17f6GTygBTaVpQhc0ay1ZXlsH3zpBIp_X3MgmG3oo7okOU8IrlmfFdJTmzEjTUgUcP0QEdNEAfmjKUbttAbSKjW1pGCgQEjWAxMLZ9XDcW3qvliINa8z"/>
+<div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-6 left-6">
+<div class="font-headline font-black text-3xl text-on-surface">ORIGINS</div>
+<div class="font-label text-xs tracking-widest text-secondary">LP / 2021</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 md:px-16 bg-surface-container-low" id="gallery">
+<div class="mb-16">
+<span class="text-secondary font-label uppercase tracking-widest text-sm">Visual Archive</span>
+<h2 class="font-headline font-black text-6xl md:text-9xl tracking-tighter text-on-surface">AESTHETIC</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8 aspect-video rounded-lg overflow-hidden relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="Cinematic wide shot of an urban street at night with futuristic purple neon signs and light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxGxpVvcB_kcrY9iKgMO4sYKe_31l8nLkn5HEOX70xy6x2hwumpYFpk7Y_nANkYl6T9rJxnTPlD3pYhdr6i5b3hXmuQEZWl12LElpB9FfkvxB9PRLPo5eN06udekJPBzGxjFuFxfDi0HHs2S13PnOkybZ_g6lSiJyEw2fZJIsHTWquaOPVI9Wpv4a5T38usV7sNtlczjJ2fWsJU-nHMpAzFbU4qubFufW_e730kHdyV2CAdnf1pTxhsiHF_1n1gCiRYeClES-41P7n"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute top-8 right-8">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="fullscreen">fullscreen</span>
+</div>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-8">
+<div class="rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Silhouetted crowd at a concert with arms raised against a bright purple and white backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgej8Ue04SpW2Z9CiGKZuRAcm6O6E_hde6grQDN6EchJBcyM2R6TSFYC3M-Ayq-rlkzeon0xCa1KmQTV8I-IwhaoZeFAro_7M-AZQ4AtUVVBlgo7AnV1O8ZkfYOtwDCxxLW8XFsFtKhpg9iYfT1L9sdtI07ZzhRREElCzgxe5y7j_vlDkx8HAR1P2BX-4Y261fsOSFw68mMVzffV7ov-iae_11lOooMGOrhkhKpHUB85Vgs1VVqXf5GOhcJN9b1pwfQaTQF0-9bNIE"/>
+</div>
+<div class="rounded-lg overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Close-up artistic shot of hands on a piano with motion blur and neon lighting reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcc6E7pIEV7JCSYhiYeg0PKa0hFpYoraLiRLlL6BShycdkb_B7fdASo5m0I-r3B6-S-JjfF4eQGDzw-Rvks2hfHeejrFTtQLSs_dAzI9zZG-0O72UU8NZd6IVpbcz7Cb0ZLvrYhRIzj7D8brK5s2vKl8dmt3akeGoWyH8RbMrwyXUiiVTpsQILydwrnFaHL4t3H3DK18G2zxI-TwtEKqcUPAnoosyR_NZOPrUpQ3_mEG6ILY8VZU_YjblVcBnMtJCJ-yD0C3ycJ36R"/>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 md:px-16" id="news">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="md:w-1/3">
+<h2 class="font-headline font-black text-5xl tracking-tighter text-primary sticky top-24">PRESS &amp;<br/>CHRONICLES</h2>
+</div>
+<div class="md:w-2/3 space-y-12">
+<div class="group border-b border-outline-variant/30 pb-12 hover:border-secondary transition-colors">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Rolling Stone / Mar 2024</span>
+<span class="material-symbols-outlined text-secondary" data-icon="arrow_outward">arrow_outward</span>
+</div>
+<h3 class="font-headline font-bold text-3xl md:text-5xl group-hover:text-secondary transition-colors">The Future of Sound is Afrofuturist</h3>
+<p class="mt-4 text-on-surface-variant max-w-2xl">A deep dive into the production techniques that created the multi-platinum single "Pulsar".</p>
+</div>
+<div class="group border-b border-outline-variant/30 pb-12 hover:border-tertiary transition-colors">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Hypebeast / Feb 2024</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="arrow_outward">arrow_outward</span>
+</div>
+<h3 class="font-headline font-bold text-3xl md:text-5xl group-hover:text-tertiary transition-colors">Afromuse Announces World Tour</h3>
+<p class="mt-4 text-on-surface-variant max-w-2xl">24 cities, 12 countries, and a visual show designed by generative AI.</p>
+</div>
+<div class="group border-b border-outline-variant/30 pb-12 hover:border-primary transition-colors">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-widest">The Fader / Jan 2024</span>
+<span class="material-symbols-outlined text-primary" data-icon="arrow_outward">arrow_outward</span>
+</div>
+<h3 class="font-headline font-bold text-3xl md:text-5xl group-hover:text-primary transition-colors">Digital Roots: The Lagos Sessions</h3>
+<p class="mt-4 text-on-surface-variant max-w-2xl">Behind the scenes of the recording process in the heart of Nigeria.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 md:px-16 bg-surface-container-highest/30" id="booking">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-headline font-black text-6xl md:text-9xl mb-8 tracking-tighter text-glow">RESERVE</h2>
+<p class="text-xl md:text-2xl mb-12 font-light text-on-surface-variant uppercase tracking-[0.2em]">Global Management &amp; Press Inquiries</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+<div class="p-8 bg-surface-container-low rounded-lg border-l-2 border-primary">
+<div class="font-label text-primary text-xs uppercase mb-4 tracking-widest">Live Bookings</div>
+<div class="text-2xl font-headline font-bold">booking@afromuse.live</div>
+</div>
+<div class="p-8 bg-surface-container-low rounded-lg border-l-2 border-secondary">
+<div class="font-label text-secondary text-xs uppercase mb-4 tracking-widest">Press &amp; Media</div>
+<div class="text-2xl font-headline font-bold">press@afromuse.live</div>
+</div>
+</div>
+<div class="mt-16 flex justify-center gap-12">
+<a class="font-label uppercase tracking-widest hover:text-primary transition-all" href="#">Instagram</a>
+<a class="font-label uppercase tracking-widest hover:text-secondary transition-all" href="#">Spotify</a>
+<a class="font-label uppercase tracking-widest hover:text-tertiary transition-all" href="#">YouTube</a>
+<a class="font-label uppercase tracking-widest hover:text-on-surface transition-all" href="#">Twitter</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#000000] w-full py-12 px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 w-full font-['Manrope'] text-sm tracking-normal">
+<div class="text-lg font-bold text-[#cf96ff] uppercase font-headline">Afromuse</div>
+<div class="flex flex-wrap gap-6">
+<a class="text-[#f5eefc]/60 hover:text-[#ff51fa] transition-all" href="#">Instagram</a>
+<a class="text-[#f5eefc]/60 hover:text-[#ff51fa] transition-all" href="#">Spotify</a>
+<a class="text-[#f5eefc]/60 hover:text-[#ff51fa] transition-all" href="#">YouTube</a>
+<a class="text-[#f5eefc]/60 hover:text-[#ff51fa] transition-all" href="#">Privacy Policy</a>
+<a class="text-[#f5eefc]/60 hover:text-[#ff51fa] transition-all" href="#">Terms</a>
+<a class="text-[#f5eefc]/60 hover:text-[#ff51fa] transition-all" href="#">Newsletter</a>
+</div>
+<div class="text-[#f5eefc]/60 uppercase text-[10px] tracking-[0.2em]">
+            © 2024 AFROMUSE. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>
