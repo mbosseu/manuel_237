@@ -15,6 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 1b. Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            // Prevent scrolling when menu is open
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+    }
+
     // 2. Smooth Scrolling for Navigation Links
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -26,6 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
+                // Close mobile menu if open
+                if (navMenu.classList.contains('active')) {
+                    menuToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'

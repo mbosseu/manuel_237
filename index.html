@@ -23,7 +23,12 @@
     <!-- Header / Navbar -->
     <header class="navbar" id="navbar">
         <div class="logo">MANUEL <span class="neon-text">237</span></div>
-        <nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="nav-menu">
             <ul>
                 <li><a href="#hero" class="nav-link">Accueil</a></li>
                 <li><a href="#about" class="nav-link">L'Artiste</a></li>
@@ -32,7 +37,7 @@
                 <li><a href="#contact" class="nav-link">Booking</a></li>
             </ul>
         </nav>
-        <button class="btn-primary" onclick="document.getElementById('music').scrollIntoView({behavior: 'smooth'})">Écouter</button>
+        <button class="btn-primary ecouter-btn" onclick="document.getElementById('music').scrollIntoView({behavior: 'smooth'})">Écouter</button>
     </header>
 
     <!-- Hero Section -->
