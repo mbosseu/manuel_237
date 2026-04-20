@@ -236,4 +236,59 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         setTimeout(initParticleBackground, 500);
     }
+
+    // =========================================================================
+    // 6. COUNTDOWN TIMER - Projet en cours
+    // =========================================================================
+    function startCountdown() {
+        function calculateTimeUntilSaturday() {
+            const now = new Date();
+            const currentDay = now.getDay(); // 0 = Dimanche, 6 = Samedi
+            const currentHour = now.getHours();
+            const currentMinutes = now.getMinutes();
+            const currentSeconds = now.getSeconds();
+            
+            let targetDate;
+            
+            // Si aujourd'hui c'est samedi et il n'est pas encore 18h
+            if (currentDay === 6 && currentHour < 18) {
+                targetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 0);
+            } else {
+                // Prochain samedi à 18h
+                const daysUntilSaturday = (6 - currentDay + 7) % 7 || 7;
+                targetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + daysUntilSaturday, 18, 0, 0);
+            }
+            
+            const timeDifference = targetDate - now;
+            
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+            
+            return { days, hours, minutes, seconds };
+        }
+        
+        function updateCountdown() {
+            const { days, hours, minutes, seconds } = calculateTimeUntilSaturday();
+            
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            
+            if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+            if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+        }
+        
+        // Mettre à jour immédiatement
+        updateCountdown();
+        
+        // Mettre à jour chaque seconde
+        setInterval(updateCountdown, 1000);
+    }
+    
+    startCountdown();
 });
